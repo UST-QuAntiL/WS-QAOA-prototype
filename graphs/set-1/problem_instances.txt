@@ -1,0 +1,8 @@
+[
+["3r-12-graph.txt", "3r-12-cuts.txt", 15],
+["rand-12-graph.txt", "rand-12-cuts.txt", 9],
+["fc-12-graph.txt", "fc-12-cuts.txt", 12],
+["3r-24-graph.txt", "3r-24-cuts.txt", 3],
+["rand-24-graph.txt", "rand-24-cuts.txt", 3],
+["fc-24-graph.txt", "fc-24-cuts.txt", 7]
+]
