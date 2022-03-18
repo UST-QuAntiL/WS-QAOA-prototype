@@ -54,13 +54,13 @@ class QAOACircuitGenerator():
         if measure:
             # Finally measure the result in the computational basis
             QAOA.barrier()
-            QAOA.measure(range(n_vertices),range(n_vertices))
+            QAOA.measure(range(n_vertices), range(n_vertices)[::-1])
 
         return QAOA
 
     @classmethod
     def genQaoaMaxcutCircuit(cls, graph, params, initial = None, p=1):
-        template = QAOACircuitGenerator.genQaoaMaxcutCircuitTemplate(graph, initial[::-1] if initial else None, p)
+        template = QAOACircuitGenerator.genQaoaMaxcutCircuitTemplate(graph, initial if initial else None, p)
         return QAOACircuitGenerator.assignParameters(template, params)
 
     @classmethod

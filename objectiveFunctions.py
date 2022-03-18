@@ -16,8 +16,9 @@ class objectiveFunction(ABC):
         cut_string = ''.join(str(x))
         if cut_string in objectiveFunction.cached_cut_size.keys() and hash(str(G)) == objectiveFunction.cached_graph:
             return objectiveFunction.cached_cut_size.get(cut_string)
-        else:
+        elif not hash(str(G)) == objectiveFunction.cached_graph:
             objectiveFunction.cached_graph = hash(str(G))
+            objectiveFunction.cached_cut_size = {}
         C = 0
         for i in range(n_vertices):
             for j in range(i):

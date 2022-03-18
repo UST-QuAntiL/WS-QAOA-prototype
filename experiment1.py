@@ -51,7 +51,14 @@ for eps in np.arange(0, 0.5001, steps):
     median_objective[eps] = np.median(objective_values_list)
 
 # present results
+print("\nmedian objective")
+for k,v in median_objective.items():
+    print(f"{k}: {v}")
 print(median_objective)
+
+print("\nmedian maxcut")
+for k,v in median_maxcut.items():
+    print(f"{k}: {v}")
 print(median_maxcut)
 
 plt.plot(median_objective.keys(), median_objective.values(), label=type(obj_func).__name__)
